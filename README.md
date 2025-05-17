@@ -38,7 +38,7 @@ Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identifi
 ### ⚙️ Componentes e Fluxo Detalhado
 
 #### 1. **Câmeras IP**  
-Dispositivos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados próximos (em VMs Windows).
+Dispositivos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados próximos (em OS.Windows).
 
 #### 2. **Zabbix Agent**  
 UserParameters configurados para:
@@ -72,6 +72,7 @@ UserParameters configurados para:
 - **Linguagens:** Python / Bash / JSON – Para coleta, parsing e envio
 - **Infraestrutura:** VPS Linux (Ubuntu 22.04)
 - **VMs de Câmeras:** Windows Server com:
+ 
   - Digifort
   - Milestone
   - Axis Camera Station (ACS)
