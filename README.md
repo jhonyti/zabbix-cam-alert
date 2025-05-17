@@ -55,3 +55,24 @@ Equipamentos distribuídos em diferentes locais, monitorados por agentes Zabbix 
 - **Distribuição de notificações**: envia alertas para canais configurados (e‑mail, Slack, Telegram etc.).  
 - **Expansões futuras**: integração com chat‑ops, dashboards em tempo real e outros sistemas de resposta automatizada.
 
+### 🛠️ Ferramentas e Infraestrutura
+
+- **Acesso HTTP**  
+  - Utilizamos `curl` diretamente no terminal para sondar a interface web das câmeras e coletar status HTTP.
+
+- **Servidores de Câmera (Windows VMs)**  
+  - **Digifort**  
+  - **Milestone**  
+  - **ACS**
+
+| Componente        | Tecnologia / Versão      | Descrição                                   |
+| ----------------- | ------------------------ | ------------------------------------------- |
+| Zabbix Server     | 6.x                      | Motor de monitoramento de infraestrutura    |
+| Zabbix Agent      | 6.x (UserParameters)     | Coleta de métricas customizadas via scripts |
+| n8n               | 1.x                      | Orquestração de workflows sem código        |
+| EvolutionAPI      | Interna / v2             | API REST para envio de alertas              |
+| Linguagens        | Python / Bash / JSON     | Scripts de coleta e payloads                |
+| Infraestrutura    | VPS Linux (Ubuntu 22.04) | Hospedagem do servidor Zabbix               |
+| Câmeras IP (VMs)  | Windows Server           | VMs rodando Digifort, Milestone e ACS       |
+
+
