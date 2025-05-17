@@ -30,36 +30,28 @@ Detectar indisponibilidade ou degradação de performance das câmeras a cada mi
                                               [EvolutionAPI / Bot]
 ```
 
-Câmeras IP: equipamentos em diferentes locais, gerenciados por agentes Zabbix.
+### 🏗 Componentes e Fluxo Detalhado
 
-Zabbix Agent:
+#### 1. Câmeras IP  
+Equipamentos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados em servidores próximos a cada câmera.
 
-Usa UserParameter para executar:
+#### 2. Zabbix Agent  
+- **UserParameters** configurados para:  
+  - **Ping**: verifica latência e disponibilidade da câmera.  
+  - **HTTP**: confere status da interface web da câmera.  
+- Coleta de métricas executada a cada **1 minuto**.
 
-Ping (latência / disponibilidade)
+#### 3. Zabbix Server (VPS)  
+- **Agregação de dados**: reúne todas as métricas dos agentes.  
+- **Triggers de alerta**: dispara quando há falha (offline) ou degradação no serviço.  
+- **Media Type customizado**: formata um **payload JSON** e envia para o endpoint do n8n.
 
-HTTP (status da interface web das câmeras)
+#### 4. n8n  
+- **Recepção do webhook**: recebe o JSON enviado pelo Zabbix.  
+- **Processamento**: faz parse, roteamento e enrich dos dados.  
+- **Integração**: aciona a **EvolutionAPI** ou executa ações adicionais via bot.
 
-Coleta métricas a cada 1 minuto.
+#### 5. EvolutionAPI / Bot  
+- **Distribuição de notificações**: envia alertas para canais configurados (e‑mail, Slack, Telegram etc.).  
+- **Expansões futuras**: integração com chat‑ops, dashboards em tempo real e outros sistemas de resposta automatizada.
 
-Zabbix Server (hospedado em VPS):
-
-Agrega dados de todos os agentes.
-
-Aciona triggers de alerta quando detecta falha ou degradação.
-
-Media Type customizado envia um payload JSON para o endpoint do n8n.
-
-n8n:
-
-Recebe o JSON do Zabbix.
-
-Processa o conteúdo (parse, roteamento, enrich).
-
-Chama a EvolutionAPI (endpoints de alertas) ou interage com um bot.
-
-EvolutionAPI / Bot:
-
-Distribui as notificações aos canais configurados (e-mail, Slack, Telegram etc.).
-
-Futuras integrações: chat‐ops, dashboards em tempo real, etc.
