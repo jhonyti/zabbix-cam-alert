@@ -1,17 +1,18 @@
-# zabbix-cam-alert
-## 📸 Monitoramento de Câmeras via Zabbix + n8n + EvolutionAPI
+# 📡 zabbix-cam-alert
 
-Este projeto automatiza o monitoramento de câmeras IP e dispara alertas em diferentes canais, integrando:
+## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
 
-- 🖥️ **Zabbix** (servidor de monitoramento)
-- 🤖 **n8n** (orquestração de workflows)
-- 🔗 **EvolutionAPI** (API de alerta / notificações)
+Automatize o monitoramento de câmeras IP e receba alertas em tempo real por meio de uma integração eficiente entre:
+
+- 🖥️ **Zabbix** – Monitoramento de infraestrutura
+- 🔧 **n8n** – Orquestração e automação de fluxos
+- 📲 **EvolutionAPI** – API para envio de notificações
 
 ---
 
 ### 🎯 Objetivo
 
-Detectar indisponibilidade ou degradação de performance das câmeras a cada minuto e notificar equipes ou sistemas externos de forma automatizada.
+Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identificando falhas ou degradações e disparando alertas automáticos para as equipes responsáveis.
 
 ---
 
@@ -30,49 +31,65 @@ Detectar indisponibilidade ou degradação de performance das câmeras a cada mi
                                               [EvolutionAPI / Bot]
 ```
 
-### 🏗 Componentes e Fluxo Detalhado
+> ✅ Uma imagem dessa arquitetura também está disponível em `docs/fluxo.png`.
 
-#### 1. Câmeras IP  
-Equipamentos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados em servidores próximos a cada câmera.
+---
 
-#### 2. Zabbix Agent  
-- **UserParameters** configurados para:  
-  - **Ping**: verifica latência e disponibilidade da câmera.  
-  - **HTTP**: confere status da interface web da câmera.  
-- Coleta de métricas executada a cada **1 minuto**.
+### ⚙️ Componentes e Fluxo Detalhado
 
-#### 3. Zabbix Server (VPS)  
-- **Agregação de dados**: reúne todas as métricas dos agentes.  
-- **Triggers de alerta**: dispara quando há falha (offline) ou degradação no serviço.  
-- **Media Type customizado**: formata um **payload JSON** e envia para o endpoint do n8n.
+#### 1. **Câmeras IP**  
+Dispositivos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados próximos (em VMs Windows).
 
-#### 4. n8n  
-- **Recepção do webhook**: recebe o JSON enviado pelo Zabbix.  
-- **Processamento**: faz parse, roteamento e enrich dos dados.  
-- **Integração**: aciona a **EvolutionAPI** ou executa ações adicionais via bot.
+#### 2. **Zabbix Agent**  
+UserParameters configurados para:
+- `ping`: Verifica conectividade e latência
+- `http`: Verifica status da interface web da câmera
 
-#### 5. EvolutionAPI / Bot  
-- **Distribuição de notificações**: envia alertas para canais configurados (e‑mail, Slack, Telegram etc.).  
-- **Expansões futuras**: integração com chat‑ops, dashboards em tempo real e outros sistemas de resposta automatizada.
+🕒 Coleta realizada a cada **1 minuto**.
 
-### 🛠️ Ferramentas e Infraestrutura
+#### 3. **Zabbix Server (VPS)**  
+- Centraliza os dados dos agentes
+- Define **triggers** para falhas ou degradações
+- Envia alertas via **Media Type JSON** para o n8n
 
-- **Acesso HTTP**  
-  - Utilizamos `curl` diretamente no terminal para sondar a interface web das câmeras e coletar status HTTP.
+#### 4. **n8n (Workflow Engine)**  
+- Recebe o webhook com dados JSON
+- Realiza parsing, enriquecimento e roteamento dos dados
+- Dispara alertas para a **EvolutionAPI** ou bots personalizados
 
-- **Servidores de Câmera (Windows VMs)**  
-  - **Digifort**  
-  - **Milestone**  
-  - **ACS**
+#### 5. **EvolutionAPI / Bot**  
+- Envia notificações para canais como WhatsApp, Telegram, Slack ou e-mail
+- Pode acionar **respostas automatizadas** (ex: reinício de serviços)
 
-| Componente        | Tecnologia / Versão      | Descrição                                   |
-| ----------------- | ------------------------ | ------------------------------------------- |
-| Zabbix Server     | 6.x                      | Motor de monitoramento de infraestrutura    |
-| Zabbix Agent      | 6.x (UserParameters)     | Coleta de métricas customizadas via scripts |
-| n8n               | 1.x                      | Orquestração de workflows sem código        |
-| EvolutionAPI      | Interna / v2             | API REST para envio de alertas              |
-| Linguagens        | Python / Bash / JSON     | Scripts de coleta e payloads                |
-| Infraestrutura    | VPS Linux (Ubuntu 22.04) | Hospedagem do servidor Zabbix               |
-| Câmeras IP (VMs)  | Windows Server           | VMs rodando Digifort, Milestone e ACS       |
+---
 
+### 🛠️ Tecnologias e Infraestrutura
 
+- **Zabbix Server:** v6.x – Motor de monitoramento
+- **Zabbix Agent:** v6.x – Com `UserParameter` para scripts customizados
+- **n8n:** v1.x – Plataforma low-code para automações
+- **EvolutionAPI:** v2 – API RESTful para envio de alertas
+- **Linguagens:** Python / Bash / JSON – Para coleta, parsing e envio
+- **Infraestrutura:** VPS Linux (Ubuntu 22.04)
+- **VMs de Câmeras:** Windows Server com:
+  - Digifort
+  - Milestone
+  - Axis Camera Station (ACS)
+
+| Componente        | Tecnologia / Versão      | Função                                      |
+|------------------|--------------------------|---------------------------------------------|
+| **Zabbix Server** | 6.x                      | Monitoramento centralizado                  |
+| **Zabbix Agent**  | 6.x + UserParameters     | Coleta remota com scripts personalizados    |
+| **n8n**           | 1.x                      | Orquestração de fluxos                      |
+| **EvolutionAPI**  | v2 (interno)             | Entrega de notificações                     |
+| **VMs de Câmera** | Windows Server           | Softwares VMS (Digifort, Milestone, ACS)    |
+| **Scripts**       | Python / Bash / JSON     | Utilizados para coleta e envio de dados     |
+
+---
+
+### 📌 Requisitos Futuros (Roadmap)
+
+- [ ] Integração com painel de status em **Grafana**
+- [ ] Autenticação de usuários via token JWT
+- [ ] Mecanismo de **re-tentativa automática**
+- [ ] Histórico de alertas e dashboard de métricas
