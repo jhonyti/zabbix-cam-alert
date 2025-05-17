@@ -28,6 +28,7 @@ Detectar indisponibilidade ou degradação de performance das câmeras a cada mi
                                                       │
                                                       ▼
                                               [EvolutionAPI / Bot]
+```
 
 Câmeras IP: equipamentos em diferentes locais, gerenciados por agentes Zabbix.
 
