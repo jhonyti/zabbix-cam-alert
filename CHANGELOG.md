@@ -12,17 +12,3 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 
 <!-- Links para as tags -->
 [v1.0.0]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.0
-
-<!-- 
-
-### Adicionado
-- *(Descreva aqui novas funcionalidades que ainda não foram lançadas)*
-
-### Corrigido
-- *(Liste aqui correções de bugs que ainda não foram lançadas)*
-
-### Alterado
-- *(Indique aqui mudanças em funcionalidades existentes que ainda não foram lançadas)*
- 
--->
-
