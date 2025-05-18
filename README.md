@@ -18,13 +18,13 @@ Automatize o monitoramento de câmeras IP e receba alertas em tempo real por mei
 
 Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identificando falhas ou degradações e disparando alertas automáticos para as equipes responsáveis.
 
----
-
 ### 🏗 Arquitetura Geral
 
 <p align="center">
   <img src="assets/arq.png" alt="zabbix-cam-alert logo" width="900"/>
 </p>
+
+---
 
 ### ⚙️ Componentes e Fluxo Detalhado
 
