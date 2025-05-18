@@ -3,7 +3,7 @@
 Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 Este changelog utiliza anotações simples e não segue estritamente os padrões formais como o "Keep a Changelog" ou versionamento semântico.
 
-## [v1.0.0] - 2025-05-17
+## [1.0.0] - 2025-05-17
 
 ### Adicionado
 - Primeira versão funcional do sistema de alerta por câmera integrado ao Zabbix.
