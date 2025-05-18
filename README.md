@@ -1,7 +1,7 @@
 # 📡 zabbix-cam-alert
 
 <p align="center">
-  <img src="assets/logo.png" alt="Nome do Projeto" width="300"/>
+  <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="300"/>
 </p>
 
 ## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
