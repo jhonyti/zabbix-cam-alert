@@ -7,21 +7,22 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 
 ### Adicionado
 - Primeira versão funcional do sistema de alerta por câmera integrado ao Zabbix.
-- Captura de imagem via câmera.
-- Envio de alerta com imagem para o servidor Zabbix.
+- Envio de alerta via n8n para Whatsapp. 
+- Documentação inicial do projeto.
 
 <!-- Links para as tags -->
 [v1.0.0]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.0
 
+<!-- 
 
-test
+### Adicionado
+- *(Descreva aqui novas funcionalidades que ainda não foram lançadas)*
 
-<!-- t
+### Corrigido
+- *(Liste aqui correções de bugs que ainda não foram lançadas)*
 
-teste no
-app
-
-
-
- -->
+### Alterado
+- *(Indique aqui mudanças em funcionalidades existentes que ainda não foram lançadas)*
+ 
+-->
 
