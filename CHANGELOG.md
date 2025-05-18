@@ -7,14 +7,17 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 ## [v1.0.1] - 18-05-2025
 *webhook-n8n-alerta*
 
-### *✅ Adicionado* -trigger
+### *✅ Adicionado* 
+- trigger
 - 🕑1h Sem receber dados do agente
 
-### *🛠️ Corrigido* -trigger
+### *🛠️ Corrigido* 
+- trigger
 - (30m e 1h Sem receber dados do agente)
 - --> não aparece como resolvido mais!
 
-### *🔄 Alterado* -trigger
+### *🔄 Alterado* 
+- trigger
 - Sem conxão agent - Down
 - --> ⚠️Sem conexão com o agente
 - 30m Sem dados do agent
