@@ -1,4 +1,4 @@
-## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
+## Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
 <p align="center">
   <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="900"/>
 </p>
@@ -8,17 +8,17 @@
 
 Automatize o monitoramento de câmeras IP e receba alertas em tempo real por meio de uma integração eficiente entre:
 
-- 🖥️ **Zabbix** – Monitoramento de infraestrutura
-- 🔧 **n8n** – Orquestração e automação de fluxos
-- 📲 **EvolutionAPI** – API para envio de notificações
+- **Zabbix** – Monitoramento de infraestrutura
+- **n8n** – Orquestração e automação de fluxos
+- **EvolutionAPI** – API para envio de notificações
 
 ---
 
-### 🎯 Objetivo
+### Objetivo
 
 Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas disparando alertas automáticos para as equipes responsáveis.
 
-### 🏗 Arquitetura Geral
+### Arquitetura Geral
 
 <p align="center">
   <img src="assets/arq.png" alt="zabbix-cam-alert logo" width="900"/>
@@ -26,7 +26,7 @@ Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas 
 
 ---
 
-### ⚙️ Componentes e Fluxo Detalhado
+### Componentes e Fluxo Detalhado
 
 #### 1. **Câmeras IP**  
 Dispositivos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados próximos (em OS.Windows).
@@ -75,7 +75,6 @@ UserParameters configurados para:
 | **n8n**           | 1.x                      | Orquestração de fluxos                      |
 | **EvolutionAPI**  | v2 (interno)             | Entrega de notificações                     |
 | **VMs de Câmera** | Windows Server           | Softwares VMS (Digifort, Milestone, ACS)    |
-| **Agente Zabbix** | Userparameter            | Utilizados para coleta e envio de dados     |
 
 ---
 
