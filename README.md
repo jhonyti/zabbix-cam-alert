@@ -1,10 +1,10 @@
-# 📡 zabbix-cam-alert
-
+## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
 <p align="center">
   <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="900"/>
 </p>
 
-## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/5515996122003)
+[![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jhony.de.almeida@gmail.com)
 
 Automatize o monitoramento de câmeras IP e receba alertas em tempo real por meio de uma integração eficiente entre:
 
