@@ -5,22 +5,22 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 
 
 ## [v1.0.1] - 18-05-2025
-*webhook-n8n-alerta*
+*webhook-n8n-alerta* \n
 
-*✅ Adicionado* -trigger
-🕑1h Sem receber dados do agente
+*✅ Adicionado* -trigger n\
+🕑1h Sem receber dados do agente \n
 
-*🛠️ Corrigido* -trigger
-(30m e 1h Sem receber dados do agente) 
---> não aparece como resolvido mais!
+*🛠️ Corrigido* -trigger \n
+(30m e 1h Sem receber dados do agente) \n
+--> não aparece como resolvido mais! \n
 
 *🔄 Alterado* -trigger
-Sem conxão agent - Down 
---> ⚠️Sem conexão com o agente
-30m Sem dados do agent 
---> 🕑30m Sem receber dados do agente
-30m e 1h Sem receber dados do agente severidade Media  
---> 30m e 1n Sem receber dados do agente severidade Alta 
+Sem conxão agent - Down \n
+--> ⚠️Sem conexão com o agente \n
+30m Sem dados do agent \n
+--> 🕑30m Sem receber dados do agente \n
+30m e 1h Sem receber dados do agente severidade Media  \n
+--> 30m e 1n Sem receber dados do agente severidade Alta \n
 
 <!-- Links para as tags -->
 [v1.0.1]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.1
