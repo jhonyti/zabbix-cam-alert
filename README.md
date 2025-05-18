@@ -78,7 +78,7 @@ UserParameters configurados para:
   - Axis Camera Station (ACS)
 
 | Componente        | Tecnologia / Versão      | Função                                      |
-|------------------|--------------------------|---------------------------------------------|
+|-------------------|--------------------------|---------------------------------------------|
 | **Zabbix Server** | 6.x                      | Monitoramento centralizado                  |
 | **Zabbix Agent**  | 6.x + UserParameters     | Coleta remota com scripts personalizados    |
 | **n8n**           | 1.x                      | Orquestração de fluxos                      |
