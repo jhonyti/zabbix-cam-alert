@@ -26,10 +26,6 @@ Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identifi
   <img src="assets/arq.png" alt="zabbix-cam-alert logo" width="900"/>
 </p>
 
-> ✅ Uma imagem dessa arquitetura também está disponível em `docs/fluxo.png`.
-
----
-
 ### ⚙️ Componentes e Fluxo Detalhado
 
 #### 1. **Câmeras IP**  
