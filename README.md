@@ -16,7 +16,7 @@ Automatize o monitoramento de câmeras IP e receba alertas em tempo real por mei
 
 ### 🎯 Objetivo
 
-Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identificando falhas ou degradações e disparando alertas automáticos para as equipes responsáveis.
+Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas disparando alertas automáticos para as equipes responsáveis.
 
 ### 🏗 Arquitetura Geral
 
@@ -62,7 +62,7 @@ UserParameters configurados para:
 - **EvolutionAPI:** v2 – API RESTful para envio de alertas
 - **Linguagens:** Python / Bash / JSON – Para coleta, parsing e envio
 - **Infraestrutura:** VPS Linux (Ubuntu 22.04)
-- **VMs de Câmeras:** Windows Server com:
+- **VMS de Câmeras:** Windows 7,10,11:
  
   - Digifort
   - Milestone
@@ -75,7 +75,7 @@ UserParameters configurados para:
 | **n8n**           | 1.x                      | Orquestração de fluxos                      |
 | **EvolutionAPI**  | v2 (interno)             | Entrega de notificações                     |
 | **VMs de Câmera** | Windows Server           | Softwares VMS (Digifort, Milestone, ACS)    |
-| **Scripts**       | Python / Bash / JSON     | Utilizados para coleta e envio de dados     |
+| **Agente Zabbix** | Userparameter            | Utilizados para coleta e envio de dados     |
 
 ---
 
