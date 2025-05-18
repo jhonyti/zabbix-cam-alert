@@ -1,4 +1,5 @@
 # 📡 zabbix-cam-alert
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://link-do-whatsapp)
 
 <p align="center">
   <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="900"/>
