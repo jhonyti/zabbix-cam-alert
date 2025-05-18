@@ -79,9 +79,11 @@ UserParameters configurados para:
 
 ---
 
+<!--
 ### 📌 Requisitos Futuros (Roadmap)
 
 - [ ] Integração com painel de status em **Grafana**
 - [ ] Autenticação de usuários via token JWT
 - [ ] Mecanismo de **re-tentativa automática**
 - [ ] Histórico de alertas e dashboard de métricas
+-->
