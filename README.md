@@ -1,5 +1,9 @@
 # 📡 zabbix-cam-alert
 
+<p align="center">
+  <img src="assets/logo.png" alt="Nome do Projeto" width="400"/>
+</p>
+
 ## 📸 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
 
 Automatize o monitoramento de câmeras IP e receba alertas em tempo real por meio de uma integração eficiente entre:
