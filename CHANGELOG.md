@@ -10,5 +10,8 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 - Captura de imagem via câmera.
 - Envio de alerta com imagem para o servidor Zabbix.
 
+<!-- Links para as tags -->
+[1.0.0]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.0
+
 
 
