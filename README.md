@@ -22,18 +22,9 @@ Monitorar continuamente a disponibilidade e desempenho das câmeras IP, identifi
 
 ### 🏗 Arquitetura Geral
 
-```text
-[Câmeras IP] ────► [Zabbix Agent (UserParameter)] ──► [Zabbix Server (VPS)]
-      │                                               │
-      │                                               ▼
-      │                                        [Media Type JSON]
-      │                                               │
-      │                                               ▼
-      └────────────────────────────────────────► [n8n Workflow]
-                                                      │
-                                                      ▼
-                                              [EvolutionAPI / Bot]
-```
+<p align="center">
+  <img src="assets/arq.png" alt="zabbix-cam-alert logo" width="900"/>
+</p>
 
 > ✅ Uma imagem dessa arquitetura também está disponível em `docs/fluxo.png`.
 
