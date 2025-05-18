@@ -13,6 +13,9 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 <!-- Links para as tags -->
 [v1.0.0]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.0
 
+
+test
+
 <!-- t
 
 teste no
