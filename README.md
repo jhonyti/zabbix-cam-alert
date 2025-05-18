@@ -1,5 +1,19 @@
 # 📡 zabbix-cam-alert
+[![Group](https://img.shields.io/badge/Group-grey)](https://link-do-grupo)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://link-do-whatsapp)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)](https://link-do-discord)
+[![Community](https://img.shields.io/badge/Community-blue)](https://link-da-comunidade)
+[![Postman](https://img.shields.io/badge/Postman-orange?logo=postman&logoColor=white)](https://link-postman)
+[![Collection](https://img.shields.io/badge/Collection-orange)](https://link-da-collection)
+[![Documentation](https://img.shields.io/badge/Documentation-grey)](https://link-da-documentacao)
+[![Official](https://img.shields.io/badge/Official-brightgreen)](https://link-oficial)
+[![License](https://img.shields.io/badge/license-grey)](https://link-da-licenca)
+[![Apache-2.0](https://img.shields.io/badge/Apache--2.0-blue)](https://choosealicense.com/licenses/apache-2.0/)
+[![Donation](https://img.shields.io/badge/Donation-grey)](https://link-de-doacao)
+[![PicPay](https://img.shields.io/badge/picpay-brightgreen)](https://picpay.me/seuusuario)
+[![GitHub](https://img.shields.io/badge/Github-grey?logo=github)](https://github.com/seu-repositorio)
+[![Sponsor](https://img.shields.io/badge/sponsor-orange)](https://link-de-patrocinio)
+
 
 <p align="center">
   <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="900"/>
