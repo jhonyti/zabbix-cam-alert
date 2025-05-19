@@ -21,7 +21,7 @@ Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas 
 ### Arquitetura Geral
 
 <p align="center">
-  <img src="assets/arq.png" alt="zabbix-cam-alert logo" width="900"/>
+  <img src="assets/arquit.png" alt="zabbix-cam-alert logo" width="900"/>
 </p>
 
 ---
