@@ -4,6 +4,26 @@ Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 Este changelog utiliza anotações simples e não segue estritamente os padrões formais como o "Keep a Changelog" ou versionamento semântico.
 
 
+<!--
+
+## (alerta) [v1.0.5] - 18-05-2025
+
+### *✅ Adicionado* 
+*n8n*
+- adicionado um novo flow de envio para clientes especificos.
+- [script]: https://github.com/jhonyti/zabbix-cam-alert/blob/main/scripts/hot_contato.js do node, com (case) para envio de msg  para numeros especificos.
+
+### *🛠️ Corrigido* 
+*trigger*
+erro no envido de msg de recuperação, de 30m e 1h
+
+### *🔄 Alterado* 
+
+-->
+<!-- Links para as tags -->
+[v1.0.5]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.5
+
+
 ## (alerta) [v1.0.1] - 18-05-2025
 
 ### *✅ Adicionado* 

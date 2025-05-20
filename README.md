@@ -1,6 +1,6 @@
 ## Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
 <p align="center">
-  <img src="assets/logo.png" alt="zabbix-cam-alert logo" width="900"/>
+  <img src="assets/logot.png" alt="zabbix-cam-alert logo" width="800"/>
 </p>
 
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/5515996122003)
@@ -21,7 +21,7 @@ Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas 
 ### Arquitetura Geral
 
 <p align="center">
-  <img src="assets/arquit.png" alt="zabbix-cam-alert logo" width="900"/>
+  <img src="assets/arquit.png" alt="zabbix-cam-alert logo" width="800"/>
 </p>
 
 ---
