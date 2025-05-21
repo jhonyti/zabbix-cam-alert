@@ -16,8 +16,12 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 ### *🛠️ Corrigido* 
 *trigger*
 erro no envido de msg de recuperação, de 30m e 1h
+adiciona lista de cameres faltante no servidor IHB.
+correção de nomes de triggers no servido ACP.
 
 ### *🔄 Alterado* 
+tempo de checagem de cameras no servidor IHB, antes: 3m 2 verificações 
+agora: 4m 3 verificações. 
 
 -->
 <!-- Links para as tags -->

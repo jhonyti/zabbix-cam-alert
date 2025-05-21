@@ -1,72 +1,61 @@
-## Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI
-<p align="center">
-  <img src="assets/logot.png" alt="zabbix-cam-alert logo" width="800"/>
-</p>
+Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI (90 % No-Code)
+<p align="center"> <img src="assets/logot.png" alt="zabbix-cam-alert logo" width="800"/> </p>
 
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/5515996122003)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jhony.de.almeida@gmail.com)
 
-Automatize o monitoramento de câmeras IP e receba alertas em tempo real por meio de uma integração eficiente entre:
-
-- **Zabbix** – Monitoramento de infraestrutura
-- **n8n** – Orquestração e automação de fluxos
-- **EvolutionAPI** – API para envio de notificações
-
----
+Visão geral:
+Uma solução low-code/no-code para monitorar câmeras IP com alertas em tempo real, documentando cada etapa e mudança do fluxo, sem precisar escrever quase nenhum código.
 
 ### Objetivo
+Monitorar continuamente a disponibilidade e a saúde de câmeras IP, identificando falhas e degradações para disparar alertas automáticos às equipes responsáveis — tudo isso com 90 % de configuração via interface, minimizando scripts e maximizando reuso.
 
-Monitorar continuamente a disponibilidade das câmeras IP, identificando falhas disparando alertas automáticos para as equipes responsáveis.
+### Arquitetura No-Code
+<p align="center"> <img src="assets/arquit.png" alt="Arquitetura Geral" width="800"/> </p>
+Coleta (Zabbix Agent)
 
-### Arquitetura Geral
+No-code: configurações em UserParameters via interface gráfica.
 
-<p align="center">
-  <img src="assets/arquit.png" alt="zabbix-cam-alert logo" width="800"/>
-</p>
+Scripts leves (Bash/Python/cmd/js) isolados apenas para ping e verificação HTTP.
 
----
+Processamento (Zabbix Server)
 
-### Componentes e Fluxo Detalhado
+Triggers e media types configurados pelo front-end.
 
-#### 1. **Câmeras IP**  
-Dispositivos distribuídos em diferentes locais, monitorados por agentes Zabbix instalados próximos (em OS.Windows).
+Envio de payload JSON ao n8n sem escrever código adicional.
 
-#### 2. **Zabbix Agent**  
-UserParameters configurados para:
-- `ping`: Verifica conectividade e latência
-- `http`: Verifica status da interface web da câmera
+Orquestração (n8n)
 
-🕒 Coleta realizada a cada **1 minuto**.
+- 90 % no-code: montagem de workflows visuais.
 
-#### 3. **Zabbix Server (VPS)**  
-- Centraliza os dados dos agentes
-- Define **triggers** para falhas ou degradações
-- Envia alertas via **Media Type JSON** para o n8n
+- Nós de parsing, enriquecimento e roteamento configurados por drag-and-drop.
 
-#### 4. **n8n (Workflow Engine)**  
-- Recebe o webhook com dados JSON
-- Realiza parsing, enriquecimento e roteamento dos dados
-- Dispara alertas para a **EvolutionAPI** ou bots personalizados
+- Pequenos trechos de JavaScript apenas quando indispensável (menos de 10% do fluxo).
 
-#### 5. **EvolutionAPI / Bot**  
-- Envia notificações para canais como WhatsApp, Telegram, Slack ou e-mail
-- Pode acionar **respostas automatizadas** (ex: reinício de serviços)
+Alerta (EvolutionAPI)
 
----
+- Conector REST configurado via interface.
 
-### 🛠️ Tecnologias e Infraestrutura
+- Envio de notificações a WhatsApp, Telegram, Slack e e-mail.
 
-- **Zabbix Server:** v6.x – Motor de monitoramento
-- **Zabbix Agent:** v6.x – Com `UserParameter` para scripts customizados
-- **n8n:** v1.x – Plataforma low-code para automações
-- **EvolutionAPI:** v2 – API RESTful para envio de alertas
-- **Linguagens:** Python / Bash / JSON – Para coleta, parsing e envio
-- **Infraestrutura:** VPS Linux (Ubuntu 22.04)
-- **VMS de Câmeras:** Windows 7,10,11:
- 
-  - Digifort
-  - Milestone
-  - Axis Camera Station (ACS)
+Opções de resposta automática (por exemplo, cameras off/on) acionadas via nós de “HTTP Request”/“Webhook”.
+
+### Como Funciona Sem Código
+- Adição de nova câmera:
+
+- Basta criar um host no Zabbix com os UserParameters pré-definidos.
+
+Ajuste de limiares:
+
+Na interface do Zabbix, edite triggers (tempo de resposta, HTTP 200).
+
+Modificação de fluxo de alerta:
+
+No painel do n8n, arraste novos nós ou ajuste variáveis de ambiente.
+
+Inclusão de canal de notificação:
+
+### Componentes Detalhados
 
 | Componente        | Tecnologia / Versão      | Função                                      |
 |-------------------|--------------------------|---------------------------------------------|
