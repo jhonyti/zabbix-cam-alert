@@ -14,46 +14,29 @@ Uma solução low-code/no-code para monitorar câmeras IP com alertas em tempo r
 ### Arquitetura No-Code
 <p align="center"> <img src="assets/arquit.png" alt="Arquitetura Geral" width="800"/> </p>
 
-### Coleta (Zabbix Agent)
-- 95 % No-Code: configuração de UserParameters diretamente pela interface gráfica do Zabbix.
-- Cada agente é registrado com dois UserParameters apontando para seu respectivo servidor:
-- userparameter_ping: executa ping a cada 1 minuto para medir conectividade e latência da câmera.
-- userparameter_http: executa curl na URL da interface web da câmera para validar o status HTTP (ex.: resposta “200 OK”).
+Agente Zabbix Ativo → Servidor Zabbix → Webhook → n8n → WhatsApp API → Usuário
+- Zabbix Server recebe dados dos agentes ativos.
+- Agente executa ICMP ping check e curl http check.
+- n8n escuta webhooks do Zabbix.
+- n8n envia alertas via WhatsApp API para os operadores.
+--- 
+### Fluxo de Funcionamento
+1. Agente Zabbix Ativo
+Instalado nos hosts que precisam ser monitorados.
+Executa checagens como:
+- ICMP (Ping)
+- HTTP (via curl ou outras requisições)
 
-Scripts auxiliares (Bash / Python / cmd / JS) são mantidos isolados, somando menos de ~30 linhas de código, e usados apenas para tratar a saída dos comandos.
+2. Servidor Zabbix
+Recebe os dados dos agentes ativos.
+Processa as métricas e aplica triggers de alerta baseadas nas condições configuradas.
 
-### Processamento (Zabbix Server)
-- Triggers de falha (ping perdido, HTTP ≠ 200) e Media Type JSON configurados pela UI.
-- Envio automático do payload JSON ao n8n sem necessidade de código adicional.
+3. Integração Zabbix → n8n
+O Zabbix, ao detectar um problema ou trigger, envia um webhook HTTP para um fluxo criado no n8n.
 
-### Orquestração (n8n)
-- 95 % no-code: montagem de workflows visuais.
-- Nós de parsing, enriquecimento e roteamento configurados por drag-and-drop.
-- Pequenos trechos de JavaScript apenas quando indispensável (menos de 10% do fluxo).
+4. n8n Automação
+- O fluxo no n8n recebe o webhook do Zabbix contendo os dados do alerta.
+- Processa essas informações e envia uma mensagem automaticamente via WhatsApp API, notificando os responsáveis.
 
-### Alerta (EvolutionAPI)
-- Conector REST configurado via interface.
-- Envio de notificações a WhatsApp, Telegram, Slack e e-mail.
-- Opções de resposta automática (por exemplo, cameras off/on) acionadas via nós de “HTTP Request”/“Webhook”.
-
-
-### Componentes Detalhados
-
-| Componente        | Tecnologia / Versão      | Função                                      |
-|-------------------|--------------------------|---------------------------------------------|
-| **Zabbix Server** | 6.x                      | Monitoramento centralizado                  |
-| **Zabbix Agent**  | 6.x + UserParameters     | Coleta remota com scripts personalizados    |
-| **n8n**           | 1.x                      | Orquestração de fluxos                      |
-| **EvolutionAPI**  | v2 (interno)             | Entrega de notificações                     |
-| **VMS de Câmera** | Windows 7, 10, 11        | Softwares VMS (Digifort, Milestone, ACS)    |
-
----
-
-<!--
-### 📌 Requisitos Futuros (Roadmap)
-
-- [ ] Integração com painel de status em **Grafana**
-- [ ] Autenticação de usuários via token JWT
-- [ ] Mecanismo de **re-tentativa automática**
-- [ ] Histórico de alertas e dashboard de métricas
--->
+5. WhatsApp API
+Interface para envio das mensagens geradas pelo n8n diretamente para o WhatsApp dos responsáveis.
