@@ -12,7 +12,7 @@ Uma solução low-code/no-code para monitorar câmeras IP com alertas em tempo r
 - configuração via interface, minimizando scripts e maximizando reuso.
 
 ### Arquitetura No-Code
-<p align="center"> <img src="assets/arquit.png" alt="Arquitetura Geral" width="800"/> </p>
+<p align="center"> <img src="assets/arquit.jpeg" alt="Arquitetura Geral" width="800"/> </p>
 
 Agente Zabbix Ativo → Servidor Zabbix → Webhook → n8n → WhatsApp API → Usuário
 - Zabbix Server recebe dados dos agentes ativos.
