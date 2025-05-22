@@ -1,5 +1,4 @@
 Monitoramento de Câmeras IP com Zabbix + n8n + EvolutionAPI (95 % No-Code)
-<p align="center"> <img src="assets/logot.png" alt="zabbix-cam-alert logo" width="800"/> </p>
 
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/5515996122003)
 [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:jhony.de.almeida@gmail.com)
@@ -21,22 +20,22 @@ Agente Zabbix Ativo → Servidor Zabbix → Webhook → n8n → WhatsApp API →
 - n8n envia alertas via WhatsApp API para os operadores.
 --- 
 ### Fluxo de Funcionamento
-1. Agente Zabbix Ativo
+### 1. Agente Zabbix Ativo
 Instalado nos hosts que precisam ser monitorados.
 Executa checagens como:
 - ICMP (Ping)
 - HTTP (via curl ou outras requisições)
 
-2. Servidor Zabbix
+### 2. Servidor Zabbix
 Recebe os dados dos agentes ativos.
 Processa as métricas e aplica triggers de alerta baseadas nas condições configuradas.
 
-3. Integração Zabbix → n8n
+### 3. Integração Zabbix → n8n
 O Zabbix, ao detectar um problema ou trigger, envia um webhook HTTP para um fluxo criado no n8n.
 
-4. n8n Automação
+### 4. n8n Automação
 - O fluxo no n8n recebe o webhook do Zabbix contendo os dados do alerta.
 - Processa essas informações e envia uma mensagem automaticamente via WhatsApp API, notificando os responsáveis.
 
-5. WhatsApp API
+### 5. WhatsApp API
 Interface para envio das mensagens geradas pelo n8n diretamente para o WhatsApp dos responsáveis.
