@@ -7,13 +7,15 @@ Visão geral:
 Uma solução low-code/no-code para monitorar câmeras IP com alertas em tempo real, documentando cada etapa e mudança do fluxo, sem precisar escrever quase nenhum código.
 
 ### Objetivo
-- Monitorar continuamente a disponibilidade e a saúde de câmeras IP, identificando falhas e degradações para disparar alertas automáticos às equipes responsáveis — tudo isso com 95 % de 
+- Monitorar continuamente a disponibilidade e a saúde de câmeras IP, identificando falhas e degradações para disparar alertas automáticos às equipes responsáveis.
 - configuração via interface, minimizando scripts e maximizando reuso.
 
 ### Arquitetura No-Code
-<p align="center"> <img src="assets/arquit.jpeg" alt="Arquitetura Geral" width="800"/> </p>
+<p align="center"> <img src="assets/arquit.jpeg" alt="Arquitetura Geral" width="700"/> </p>
 
+```
 Agente Zabbix Ativo → Servidor Zabbix → Webhook → n8n → WhatsApp API → Usuário
+```
 - Zabbix Server recebe dados dos agentes ativos.
 - Agente executa ICMP ping check e curl http check.
 - n8n escuta webhooks do Zabbix.
