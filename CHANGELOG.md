@@ -9,7 +9,7 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 ### *✅ Adicionado* 
 *n8n*
 - adicionado um novo flow de envio para clientes especificos.
-- ![script].(https://github.com/jhonyti/zabbix-cam-alert/blob/main/scripts/hot_contato.js) do node, com (case) para envio de msg  para numeros especificos.
+- [script](https://github.com/jhonyti/zabbix-cam-alert/blob/main/scripts/hot_contato.js) do node, com (case) para envio de msg  para numeros especificos.
 
 ### *🛠️ Corrigido* 
 *trigger*
@@ -21,7 +21,6 @@ correção de nomes de triggers no servidor ACP.
 tempo de checagem de cameras no servidor IHB, antes: 3m 2 verificações 
 agora: 4m 3 verificações. 
 
--->
 <!-- Links para as tags -->
 [v1.0.5]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.5
 
