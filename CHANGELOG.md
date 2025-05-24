@@ -9,7 +9,7 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 ### *✅ Adicionado* 
 *n8n*
 - adicionado um novo flow de envio para clientes especificos.
-- [script]: https://github.com/jhonyti/zabbix-cam-alert/blob/main/scripts/hot_contato.js do node, com (case) para envio de msg  para numeros especificos.
+- ![script].(https://github.com/jhonyti/zabbix-cam-alert/blob/main/scripts/hot_contato.js) do node, com (case) para envio de msg  para numeros especificos.
 
 ### *🛠️ Corrigido* 
 *trigger*
