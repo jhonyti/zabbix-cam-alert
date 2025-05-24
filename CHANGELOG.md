@@ -14,13 +14,13 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 
 ### *🛠️ Corrigido* 
 *trigger*
-erro no envido de msg de recuperação, de 30m e 1h
-adiciona lista de cameres faltante no servidor IHB.
-correção de nomes de triggers no servidor ACP.
+- erro no envido de msg de recuperação, de 30m e 1h
+- adiciona lista de cameres faltante no servidor IHB.
+- correção de nomes de triggers no servidor ACP.
 
 ### *🔄 Alterado* 
-tempo de checagem de cameras no servidor IHB, antes: 3m 2 verificações 
-agora: 4m 3 verificações. 
+- tempo de checagem de cameras no servidor IHB, antes: 3m 2 verificações 
+- agora: 4m 3 verificações. 
 
 <!-- Links para as tags -->
 [v1.0.5]: https://github.com/jhonyti/zabbix-cam-alert/releases/tag/v1.0.5
