@@ -4,9 +4,7 @@ Todas as mudanças notáveis deste projeto serão documentadas neste arquivo.
 Este changelog utiliza anotações simples e não segue estritamente os padrões formais como o "Keep a Changelog" ou versionamento semântico.
 
 
-<!--
-
-## (alerta) [v1.0.5] - 18-05-2025
+(alerta) [v1.0.5] - 18-05-2025
 
 ### *✅ Adicionado* 
 *n8n*
@@ -17,7 +15,7 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 *trigger*
 erro no envido de msg de recuperação, de 30m e 1h
 adiciona lista de cameres faltante no servidor IHB.
-correção de nomes de triggers no servido ACP.
+correção de nomes de triggers no servidor ACP.
 
 ### *🔄 Alterado* 
 tempo de checagem de cameras no servidor IHB, antes: 3m 2 verificações 
