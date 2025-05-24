@@ -5,7 +5,7 @@ Este changelog utiliza anotações simples e não segue estritamente os padrões
 
 ---
 
-## (alerta) [v1.0.5] - 18-05-2025
+## (alerta) [v1.0.5] - 24-05-2025
 
 ### *✅ Adicionado* 
 *n8n*
